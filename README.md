@@ -1,1 +1,1 @@
-# This page is created by ChatGPT
+# This page is mainly created by ChatGPT
