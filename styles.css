@@ -1,3 +1,17 @@
+/* フェードイン用スタイル */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px); /* 少し下からフェードイン */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に戻る */
+}
+
+
+
 
 * {
     margin: 0;

@@ -35,13 +35,13 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>教室の紹介</h2>
         <p>石井ピアノ教室は、初心者から上級者まで、幅広い年齢層を対象としたレッスンを提供しています。音楽の楽しさを伝え、一人ひとりに合った指導を行います。</p>
     </section>
 
     <!-- Lessons Section -->
-    <section id="lessons">
+    <section id="lessons" class="fade-in">
         <h2>レッスン内容</h2>
         <div class="lesson">
             <h3>幼児向けコース</h3>
@@ -59,7 +59,7 @@
 
 
     <!-- FAQ Section -->
-    <section id="faq">
+    <section id="faq" class="fade-in">
         <h2>よくある質問</h2>
         <div class="faq-item">
             <h3>Q: 初心者でも大丈夫ですか？</h3>
@@ -76,7 +76,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>お問い合わせ</h2>
 		<!-- Instagram Link -->
 		<div class="social-media">
@@ -90,5 +90,43 @@
     <footer>
         <p>&copy; 2024 石井ピアノ教室</p>
     </footer>
+
+	<script>
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // 全ての fade-in クラスを持つ要素を取得
+    const fadeIns = document.querySelectorAll('.fade-in');
+
+    // メニューのリンクを取得
+    const menuLinks = document.querySelectorAll('.menu a');
+
+    // メニューリンクをクリックした場合
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // フェードインさせず、全てのセクションを表示
+            fadeIns.forEach(section => {
+                section.classList.add('visible');
+            });
+        });
+    });
+
+    // スクロール時にフェードインを実行する関数
+    const handleScroll = () => {
+        fadeIns.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                section.classList.add('visible');
+            }
+        });
+    };
+
+    // スクロールイベントを監視
+    window.addEventListener('scroll', handleScroll);
+
+    // 初回実行
+    handleScroll();
+});
+	</script>
 </body>
 </html>
