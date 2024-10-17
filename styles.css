@@ -19,7 +19,7 @@ header {
 	font-family: "Kaisei Decol", serif;
 	font-weight: 500;
 	font-style: normal;
-
+	width: 100%;
     background-color: #333;
     color: #fff;
     padding: 1rem;
@@ -43,7 +43,8 @@ nav ul li a {
 }
 
 .hero {
-    background: url('piano.jpg') no-repeat center center/cover;
+    background: url('piano.jpg') no-repeat center center;
+    background-size: cover; /* 画像を横幅全体に広げる */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,6 +52,10 @@ nav ul li a {
     align-items: center;
     color: #fff;
     text-align: center;
+	margin: 0; /* 余白をゼロに設定 */
+    padding: 0; /* 内側の余白もゼロに設定 */
+	width: 100vw; /* ビューポートの幅全体に広げる */
+    width: 100%; /* 横幅を100%に */
 }
 
 .hero h1 {
@@ -70,7 +75,7 @@ nav ul li a {
 }
 
 .hero .button {
-    background-color: #ff9900;
+    background-color: #333;
     color: #fff;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -83,6 +88,11 @@ section {
     text-align: center;
 }
 
+section#home{
+	margin: 0; /* 余白をゼロに設定 */
+	padding: 0; /* 内側の余白もゼロに設定 */
+	width: 100vw; /* ビューポートの幅全体に広げる */
+}
 section#about, section#lessons, section#teacher, section#faq, section#contact {
     background-color: #fff;
     margin: 2rem auto;
