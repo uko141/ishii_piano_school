@@ -6,13 +6,20 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+	font-family: "Kaisei Decol", serif;
+	font-weight: 500;
+	font-style: normal;
+
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
 header {
+	font-family: "Kaisei Decol", serif;
+	font-weight: 500;
+	font-style: normal;
+
     background-color: #333;
     color: #fff;
     padding: 1rem;
@@ -59,7 +66,7 @@ nav ul li a {
 	font-style: normal;
     font-size: 1.5rem;
     margin: 1rem 0;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 3px 3px 0 #000;
 }
 
 .hero .button {
